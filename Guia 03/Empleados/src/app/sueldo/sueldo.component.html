@@ -1,0 +1,33 @@
+<div class="header">
+    <h1>Datos del Empleado</h1>
+    <p>Ingrese los datos del Empleados</p>
+    </div>
+    <label>Nombre :</label>
+    <input type="text" [(ngModel)]="nombre">
+    <label>Sueldo :</label>
+    <input type="text" [(ngModel)]="sueldoi">
+    <button class="button" (click)="ingresar()">Ingresar</button>
+    <br/><br/>
+    <table [hidden]="contador == 0">
+    <thead>
+    <tr>
+        
+    <th>Nombre</th>
+    <th>Sueldo</th>
+    <th>ISSS</th>
+    <th>Renta</th>
+    <th>AFP</th>
+    <th>Sueldo Final</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let temp of registro">
+        <td>{{temp.nombre}}</td>
+        <td>{{temp.sueldoi}}</td>
+        <td>{{temp.ISSS}}</td>
+        <td>{{temp.Renta}}</td>
+        <td>{{temp.AFP}}</td>
+        <td>{{temp.sueldot}}</td>
+        </tr>
+        </tbody>
+        </table>
